@@ -106,7 +106,7 @@ const Navbar = () => {
 
           {/* Button - RIGHT */}
           <div className="navbar-end">
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-6">
               <Link
                 href=""
                 className="flex items-center gap-2 text-sm text-gray-300"

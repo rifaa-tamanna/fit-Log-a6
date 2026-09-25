@@ -1,4 +1,3 @@
-import React from 'react';
 import Banner from './components/homePage/Banner';
 import TheLibrary from './components/homePage/Library';
 
@@ -7,6 +6,7 @@ const HomePage = () => {
     <div className='bg-black'>
       <Banner></Banner>
       <TheLibrary></TheLibrary>
+
     </div>
   );
 };
