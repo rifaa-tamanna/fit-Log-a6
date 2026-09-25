@@ -1,23 +1,56 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import logo from '@/assets/logo.png'
+import { useContext } from "react";
+import { usePathname } from "next/navigation";
+
+import logo from "@/assets/logo.png";
+import { WorkoutsContext } from "@/context/WorkoutsContext";
 
 const Navbar = () => {
+  const context = useContext(WorkoutsContext);
+
+  const pathname = usePathname();
+
+  const planCount = context?.myPlan.length ?? 0;
+  const savedCount = context?.saved.length ?? 0;
+
+  // ================= ACTIVE NAV =================
+
+  const isWorkoutActive =
+    pathname === "/workout" || pathname.startsWith("/workout/");
+
+  const isMyPlanActive =
+    pathname === "/my-plan" || pathname.startsWith("/my-plan/");
+
   const links = (
     <>
+      {/* ================= WORKOUTS ================= */}
+
       <li>
         <Link
           href="/workout"
-          className="text-[#C0F600] font-semibold font-inter py-[10px] px-[20px] rounded-full bg-[#1A2312]"
+          className={`font-inter font-semibold transition-all ${
+            isWorkoutActive
+              ? "rounded-full bg-[#1A2312] px-[20px] py-[10px] text-[#C0F600]"
+              : "px-[20px] py-[10px] text-slate-400 hover:text-white"
+          }`}
         >
           Workouts
         </Link>
       </li>
 
+      {/* ================= MY PLAN ================= */}
+
       <li>
         <Link
           href="/my-plan"
-          className="text-slate-400 font-inter font-semibold"
+          className={`font-inter font-semibold transition-all ${
+            isMyPlanActive
+              ? "rounded-full bg-[#1A2312] px-[20px] py-[10px] text-[#C0F600]"
+              : "px-[20px] py-[10px] text-slate-400 hover:text-white"
+          }`}
         >
           My Plan
         </Link>
@@ -26,11 +59,13 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-black shadow-sm items-center text-center">
-      <div className="max-w-7xl mx-auto w-full">
+    <div className="navbar items-center bg-black text-center shadow-sm">
+      <div className="mx-auto w-full max-w-7xl">
         {/* ================= MOBILE NAVBAR ================= */}
+
         <div className="flex items-center justify-between lg:hidden">
-          {/* Hamburger - LEFT */}
+          {/* Hamburger */}
+
           <div className="dropdown">
             <div
               tabIndex={0}
@@ -55,15 +90,17 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu */}
+
             <ul
               tabIndex={-1}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content z-10 mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
             >
               {links}
             </ul>
           </div>
 
-          {/* Logo + FITLOG - CENTER */}
+          {/* Logo */}
+
           <Link href="/" className="flex items-center gap-2">
             <Image
               src={logo}
@@ -76,13 +113,14 @@ const Navbar = () => {
             <span className="text-xl font-semibold text-white">FITLOG</span>
           </Link>
 
-          {/* Button - RIGHT */}
-          <button className="btn">Button</button>
+          <div className="w-10" />
         </div>
 
         {/* ================= DESKTOP NAVBAR ================= */}
-        <div className="hidden lg:flex navbar">
-          {/* Logo - LEFT */}
+
+        <div className="navbar hidden lg:flex">
+          {/* Logo */}
+
           <div className="navbar-start">
             <Link href="/" className="flex items-center gap-2">
               <Image
@@ -93,37 +131,43 @@ const Navbar = () => {
                 className="h-7 w-7 object-contain"
               />
 
-              <span className="text-xl font-semibold text-white font-oswald">
+              <span className="font-oswald text-xl font-semibold text-white">
                 FITLOG
               </span>
             </Link>
           </div>
 
-          {/* Links - CENTER */}
+          {/* Center Links */}
+
           <div className="navbar-center">
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
 
-          {/* Button - RIGHT */}
+          {/* Right */}
+
           <div className="navbar-end">
             <div className="flex items-center gap-6">
+              {/* ================= PLAN ================= */}
+
               <Link
-                href=""
+                href="/my-plan"
                 className="flex items-center gap-2 text-sm text-gray-300"
               >
                 Plan
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-lime-400 text-sm font-bold font-inter text-black">
-                  0
+                <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-lime-400 px-1.5 font-inter text-sm font-bold text-black">
+                  {planCount}
                 </span>
               </Link>
 
+              {/* ================= SAVED ================= */}
+
               <Link
-                href=""
+                href="/my-plan"
                 className="flex items-center gap-2 text-sm text-gray-400"
               >
                 Saved
-                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-gray-600 text-sm text-gray-400 font-inter">
-                  0
+                <span className="flex h-6 min-w-6 items-center justify-center rounded-full border border-gray-600 px-1.5 font-inter text-sm text-gray-400">
+                  {savedCount}
                 </span>
               </Link>
             </div>

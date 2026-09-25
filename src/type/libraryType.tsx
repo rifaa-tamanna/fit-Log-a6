@@ -10,6 +10,6 @@ export interface ILibrary {
   sets: number;
   reps: string;
   rating: number;
-  description: number;
+  description: string;
   instructions: string[];
 }
