@@ -6,26 +6,23 @@ interface libraryDataProps {
   libraryData: ILibrary;
 }
 
-
-
-
 const LibraryCard = ({ libraryData }: libraryDataProps) => {
   return (
-    <Link href={`/workout/${libraryData.id}`}>
-      <div className="card w-full overflow-hidden rounded-2xl bg-[#15171d] border border-[#292c34] shadow-sm">
+    <Link href={`/workout/${libraryData.id}`} className="block h-full">
+      <div className="card w-full h-full overflow-hidden rounded-2xl bg-[#15171d] border border-[#292c34] shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:border-[#baff00] hover:shadow-lg">
         {/* Image */}
-        <figure className="w-full h-[220px] sm:h-[240px] md:h-[220px]">
+        <figure className="w-full h-[200px] sm:h-[220px] md:h-[230px] lg:h-[240px]">
           <Image
             src={libraryData.image}
             alt={libraryData.name}
             width={500}
             height={300}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </figure>
 
         {/* Card Content */}
-        <div className="p-5">
+        <div className="p-4 sm:p-5">
           {/* Muscle Groups */}
           <div className="flex flex-wrap gap-2 mb-4">
             {libraryData.muscleGroups.map((muscle, index) => (
@@ -39,7 +36,7 @@ const LibraryCard = ({ libraryData }: libraryDataProps) => {
           </div>
 
           {/* Title */}
-          <h2 className="text-xl font-bold uppercase font-oswald text-white tracking-wide">
+          <h2 className="text-lg sm:text-xl font-bold uppercase font-oswald text-white tracking-wide">
             {libraryData.name}
           </h2>
 
@@ -50,7 +47,7 @@ const LibraryCard = ({ libraryData }: libraryDataProps) => {
           <div className="border-t border-[#292c34] my-4"></div>
 
           {/* Stats */}
-          <div className="flex items-center gap-5 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-sm text-gray-400">
             {/* Duration */}
             <div className="flex items-center gap-1.5">
               <span>◷</span>
