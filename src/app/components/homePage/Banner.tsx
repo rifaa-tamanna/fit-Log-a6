@@ -1,13 +1,14 @@
 import Image from "next/image";
+import bannerImage from '@/assets/banner.png'
 
 const Banner = () => {
   return (
     <div className="hero bg-black ">
-      <div className="hero-content w-full max-w-[1400px] min-h-[500px] mx-auto my-[50px] px-20 py-10 bg-[#15171D] rounded-2xl flex-col lg:flex-row-reverse lg:justify-between">
+      <div className="hero-content w-full max-w-7xl min-h-[500px] mx-auto my-[50px] px-20 py-10 bg-[#15171D] rounded-2xl flex-col lg:flex-row-reverse lg:justify-between">
         {/* Banner Image */}
         <Image
           className="w-[350px] lg:w-[400px] h-auto object-contain"
-          src="/assets/banner.png"
+          src={bannerImage}
           alt="FitLog workout"
           width={400}
           height={400}

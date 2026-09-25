@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logo from '@/assets/logo.png'
 
 const Navbar = () => {
   const links = (
@@ -65,7 +66,7 @@ const Navbar = () => {
           {/* Logo + FITLOG - CENTER */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/assets/logo.png"
+              src={logo}
               alt="FitLog Logo"
               width={28}
               height={28}
