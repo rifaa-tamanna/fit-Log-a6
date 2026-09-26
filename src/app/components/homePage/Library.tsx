@@ -13,7 +13,7 @@ const TheLibrary = async () => {
 
   return (
     <section id="library" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
-      <div className="max-w-7xl mx-auto my-[20px]">
+      <div className="max-w-7xl mx-auto my-5">
         <h1 className="font-oswald text-white text-[30px] font-bold">
           THE LIBRARY
         </h1>
@@ -24,7 +24,7 @@ const TheLibrary = async () => {
       </div>
 
       {/* Library Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-[20px] mb-[80px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 mb-20">
         {libraryDatas.map((libraryData: ILibrary, ind: number) => {
           return <LibraryCard key={ind} libraryData={libraryData} />;
         })}

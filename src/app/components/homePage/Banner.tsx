@@ -11,7 +11,7 @@ const Banner = () => {
           hero-content
           w-full
           max-w-7xl
-          min-h-[500px]
+          min-h-125
           mx-auto
           my-6 sm:my-8 lg:my-[50px]
           px-5 sm:px-8 md:px-10 lg:px-16 xl:px-20

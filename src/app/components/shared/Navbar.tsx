@@ -22,7 +22,7 @@ const Navbar = () => {
     pathname === "/my-plan" || pathname.startsWith("/my-plan/");
 
   return (
-    <div className="navbar bg-black shadow-sm text-center">
+    <div className="navbar sticky top-0 z-50 bg-black shadow-sm text-center">
       <div className="max-w-7xl mx-auto w-full px-4">
         {/* ================= MOBILE ================= */}
         <div className="lg:hidden w-full">
@@ -67,7 +67,7 @@ const Navbar = () => {
 
               <ul
                 tabIndex={0}
-                className="menu dropdown-content mt-3 z-[1] w-52 rounded-box bg-[#15171D] border border-[#292C34] p-2 shadow"
+                className="menu dropdown-content mt-3 z-1 w-52 rounded-box bg-[#15171D] border border-[#292C34] p-2 shadow"
               >
                 <li>
                   <Link
@@ -163,8 +163,8 @@ const Navbar = () => {
                   href="/my-plan?tab=today"
                   className={
                     isMyPlanActive
-                      ? "text-[#C0F600] font-semibold font-inter py-[10px] px-[20px] rounded-full bg-[#1A2312]"
-                      : "text-slate-400 font-inter font-semibold py-[10px] px-[20px] rounded-full"
+                      ? "text-[#C0F600] font-semibold font-inter py-2.5 px-5 rounded-full bg-[#1A2312]"
+                      : "text-slate-400 font-inter font-semibold py-2.5 px-5 rounded-full"
                   }
                 >
                   My Plan

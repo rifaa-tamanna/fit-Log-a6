@@ -11,7 +11,7 @@ const LibraryCard = ({ libraryData }: libraryDataProps) => {
     <Link href={`/workout/${libraryData.id}`} className="block h-full">
       <div className="card w-full h-full overflow-hidden rounded-2xl bg-[#15171d] border border-[#292c34] shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:border-[#baff00] hover:shadow-lg">
         {/* Image */}
-        <figure className="w-full h-[200px] sm:h-[220px] md:h-[230px] lg:h-[240px]">
+        <figure className="w-full h-50 sm:h-55 md:h-57 lg:h-60">
           <Image
             src={libraryData.image}
             alt={libraryData.name}
