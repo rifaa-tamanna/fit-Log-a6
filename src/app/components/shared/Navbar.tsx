@@ -146,15 +146,15 @@ const Navbar = () => {
           {/* Right */}
 
           <div className="navbar-end">
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
               {/* ================= PLAN ================= */}
 
               <Link
                 href="/my-plan"
-                className="flex items-center gap-2 text-sm text-gray-300"
+                className="flex items-center gap-2 font-bold text-sm text-gray-300"
               >
                 Plan
-                <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-lime-400 px-1.5 font-inter text-sm font-bold text-black">
+                <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-lime-400 px-1.5 font-inter text-sm text-black">
                   {planCount}
                 </span>
               </Link>
@@ -163,7 +163,7 @@ const Navbar = () => {
 
               <Link
                 href="/my-plan"
-                className="flex items-center gap-2 text-sm text-gray-400"
+                className="flex items-center gap-2 font-bold text-sm text-gray-400"
               >
                 Saved
                 <span className="flex h-6 min-w-6 items-center justify-center rounded-full border border-gray-600 px-1.5 font-inter text-sm text-gray-400">
