@@ -59,7 +59,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar items-center bg-black text-center shadow-sm">
+    <div className="navbar sticky top-0 z-50 items-center bg-black text-center shadow-sm">
       <div className="mx-auto w-full max-w-7xl">
         {/* ================= MOBILE NAVBAR ================= */}
 
