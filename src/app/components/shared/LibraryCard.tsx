@@ -56,7 +56,7 @@ const LibraryCard = ({ libraryData }: libraryDataProps) => {
 
             {/* Calories */}
             <div className="flex items-center gap-1.5">
-              <span>💦</span>
+              <span>𐐘</span>
               <span>{libraryData.caloriesBurned} kcal</span>
             </div>
 
@@ -73,3 +73,4 @@ const LibraryCard = ({ libraryData }: libraryDataProps) => {
 };
 
 export default LibraryCard;
+

@@ -4,8 +4,12 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="max-w-7xl mx-auto footer my-[20px] bg-[#090A0D]  mx-auto sm:footer-horizontal text-neutral-content items-center p-4">
-      <Link href="/" className="flex items-center gap-2">
+    <footer className="max-w-7xl mx-auto my-[20px] bg-[#090A0D] text-neutral-content p-4 rounded-lg flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:gap-4">
+      {/* Logo */}
+      <Link
+        href="/"
+        className="flex items-center justify-center gap-2 md:justify-start"
+      >
         <Image
           src={logo}
           alt="FitLog Logo"
@@ -17,11 +21,10 @@ const Footer = () => {
         <span className="text-[17px] font-lg text-white">FITLOG</span>
       </Link>
 
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <aside className="grid-flow-col items-center">
-          <p className="text-[#6B7280]">© 2026 FitLog — Workout Library. Train hard, log honest.</p>
-        </aside>
-      </nav>
+      {/* Copyright */}
+      <p className="text-[#6B7280] text-center text-sm sm:text-right">
+        © 2026 FitLog — Workout Library. Train hard, log honest.
+      </p>
     </footer>
   );
 };
