@@ -8,9 +8,9 @@ The application provides a clean, dark-themed gym experience where users can bro
 
 ## 🚀 Live Project
 
-🔗 *Live Demo:* Add your live website URL here
+🔗 *Live Demo:* https://github.com/rifaa-tamanna/fit-Log-a6
 
-🔗 *Repository:* Add your GitHub repository URL here
+🔗 *Repository:* https://github.com/rifaa-tamanna/fit-Log-a6
 
 ---
 
@@ -145,20 +145,3 @@ Toast notifications provide immediate feedback when users perform actions such a
 | /my-plan | Manage today's plan and saved workouts |
 
 ---
-
-## 🎯 Core User Flow
-
-Home
-  ↓
-Workout Library
-  ↓
-Select Workout
-  ↓
-Workout Details
-  ↓
-Add to Today's Plan / Save for Later
-  ↓
-My Plan
-  ↓
-Manage Workoutstemplate&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
