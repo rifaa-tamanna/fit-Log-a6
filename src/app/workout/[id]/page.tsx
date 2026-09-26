@@ -9,9 +9,15 @@ interface IWorkoutDetailsPageProps {
 }
 
 const getLibraryData = async (id: string) => {
-  const response = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
-  const data = await response.json();
-  return data;
+  try {
+
+    const response = await fetch(`https://api.api-store.workers.dev/api/fitlog/${id}`);
+    const data = await response.json();
+    return data;
+  } catch(error) {
+    console.error("Error library data fetch")
+    return null
+  }
 };
 
 const workoutDetailsPage = async ({ params }: IWorkoutDetailsPageProps) => {
