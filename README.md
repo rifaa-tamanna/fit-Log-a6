@@ -8,7 +8,7 @@ The application provides a clean, dark-themed gym experience where users can bro
 
 ## 🚀 Live Project
 
-🔗 *Live Demo:* https://github.com/rifaa-tamanna/fit-Log-a6
+🔗 *Live Demo:* https://fit-log-a6-gsou.vercel.app
 
 🔗 *Repository:* https://github.com/rifaa-tamanna/fit-Log-a6
 
